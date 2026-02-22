@@ -12,8 +12,9 @@ document.getElementById("add-money-btn").addEventListener("click",function(){
 
     // 2- get bank account number
 
-    const accno=("add-money-number");
-    console.log(accno);
+    const accno=document.getElementById("add-money-number");
+    const accountValue=accno.value; 
+    console.log(accountValue);
 
     // 3-get balance
 
@@ -26,6 +27,31 @@ document.getElementById("add-money-btn").addEventListener("click",function(){
     if(pin==="1234"){
         alert(`Add Money Success from ${bankAccount} at ${new Date()}`);
         setBalance(newBalance);
+
+      //...For transaction...//
+
+      //1-history container id
+      const history=document.getElementById("history-container");
+
+      //2-new div create
+      const newHistory=document.createElement("div");
+
+      //3-add innerHTML within new div
+
+      newHistory.innerHTML=`
+      
+        <div class="transaction-card p-5 bg-base-100">
+              
+          Add Money Success from ${bankAccount}, acc-no ${accountValue} at ${new Date()}
+
+      </div>
+      
+      `;
+
+      //4- Append new div within history container
+
+      history.append(newHistory);
+     
 
     }else{
 
