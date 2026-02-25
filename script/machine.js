@@ -38,7 +38,8 @@ function showOnly(id){
       const sendMoney=document.getElementById("transfer-money");
       const payMoney=document.getElementById("Pay-bill");
       const history=document.getElementById("history");
-      console.log(`add Money- ${addmoney},Cashout-${cashout} ,History-${history},Transfer-${sendMoney},Payment-${payMoney}`);
+      const coupon=document.getElementById("get-bonus");
+      console.log(`add Money- ${addmoney},Cashout-${cashout} ,History-${history},Transfer-${sendMoney},Payment-${payMoney},Getbonus-${coupon}`);
 
       // All hide
 
@@ -47,6 +48,7 @@ function showOnly(id){
       sendMoney.classList.add("hidden");
       payMoney.classList.add("hidden");
       history.classList.add("hidden");
+      coupon.classList.add("hidden");
 
       // remove selected id of hide
 
