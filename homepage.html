@@ -318,14 +318,27 @@
 
         <div class="card-body ">
         <fieldset class="fieldset">
-          <label class="label font-medium text-[#080808]">User Account Number</label>
-          <input id="sendMoney-number"maxlength="11" minlength="11" type="text" class="input rounded-full bg-base-200 w-full" placeholder="Enter 11 digit number" />
-          <label class="label font-medium text-[#080808]">Amount</label>
-          <input id="sendMoney-amount" type="number" class="input bg-base-200 rounded-full w-full" placeholder="Enter amount to transfer" />
+
+          <label class="label font-medium text-[#080808]">Select Payment Method</label>
+     <select id="select-payment" class="select w-full bg-base-200 rounded-full">
+      <option disabled selected>Select a payment method</option>
+      <option value="bkash">bKash</option>
+      <option value="nagad">Nagad</option>
+      <option value="rocket">Rocket</option>
+      <option value="bank">Bank Transfer</option>
+      <option value="card">Debit / Credit Card</option>
+  </select>
+
+   <br>
+
+          <label class="label font-medium text-[#080808]">Biller Account Number</label>
+          <input id="PayMoney-number"maxlength="11" minlength="11" type="text" class="input rounded-full bg-base-200 w-full" placeholder="Enter account number " />
+          <label class="label font-medium text-[#080808]">Amount to Pay</label>
+          <input id="PayMoney-amount" type="number" class="input bg-base-200 rounded-full w-full" placeholder="Add Amount to pay" />
           <label class="label font-medium text-[#080808]">Pin Number</label>
-          <input id="sendMoney-pin" maxlength="4" minlength="4" type="password" class="input bg-base-200 rounded-full w-full" placeholder="Enter 4 digit pin number" />
+          <input id="PayMoney-pin" maxlength="4" minlength="4" type="password" class="input bg-base-200 rounded-full w-full" placeholder="Enter 4 digit pin number" />
           
-          <button id="sendMoney-btn" class="btn btn-primary mt-4 rounded-full">Send Now</button>
+          <button id="payMoney-btn" class="btn btn-primary mt-4 rounded-full">Pay Now</button>
         </fieldset>
       </div>
 
@@ -360,6 +373,7 @@
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
     <script src="./script/transferMoney.js"></script>
+    <script src="./script/paybill.js"></script>
     
 </body>
 </html>
