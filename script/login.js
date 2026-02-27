@@ -22,7 +22,7 @@ document.getElementById("login-btn").addEventListener("click", function(){
 
         //  has scope for back
 
-         window.location.assign("/homepage.html");
+         window.location.assign("/ShohojPay-project/homepage.html");
 
 
     }else{
